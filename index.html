@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Coffee Shop</title>
+
+    <!-- fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="coffee_style.css" />
+  </head>
+  <body>
+    <!-- header section starts -->
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="coffee_imgs/coffee-logo.png" />
+      </a>
+
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Drinks</a>
+        <a href="#raw-coffee">Raw Coffee</a>
+        <a href="#review">Review</a>
+        <a href="#contact">Contact</a>
+        <a href="#blogs">Blogs</a>
+      </nav>
+
+      <div class="icons">
+        <div class="fas fa-search" id="search-btn"></div>
+        <div class="fas fa-shopping-cart" id="cart-btn"></div>
+        <div class="fas fa-bars" id="menu-btn"></div>
+
+        <div class="dropdown">
+          <button
+            onclick="myFunction()"
+            class="dropbtn fa-solid fa-shop"
+          ></button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Coffee Shop</a>
+            <a href="#about">New Shop</a>
+            <a href="#contact">New Shop</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="Search Here..." />
+        <label for="search-box" class="fas fa-search"></label>
+      </div>
+
+      <div class="cart-items-container">
+        <div class="cart-bottom-part">
+          <h2 class="total">
+            Total: <span class="cart-total-price">$ 0</span>
+          </h2>
+
+          <a href="#" id="myBtn" class="btn btn-purchase"> Check Out</a>
+        </div>
+      </div>
+    </header>
+    <!-- header section ends -->
+
+    <!-- pop up part -->
+    <section class="pop-up-container">
+      <div class="card-confirmation">
+        <img src="coffee_imgs/check-icon-1.png" alt="" />
+        <h2>Order is Confirmed Successfully</h2>
+        <p>Please Visit us again 💕</p>
+        <button class="btn-close" onclick="hide_pop_conformation()">
+          Close
+        </button>
+      </div>
+
+      <div class="card-warning">
+        <img src="coffee_imgs/warning2.png" alt="" />
+        <h2>Item is Already Added To Cart</h2>
+        <p>Please increase the amount from the cart</p>
+        <button class="btn-close" onclick="hide_pop_warning()">Close</button>
+      </div>
+    </section>
+    <!-- pop up part -->
+
+    <!-- Home section starts -->
+    <section class="home" id="home">
+      <div class="content">
+        <h3>Fresh Coffee In The Morning</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo
+          rerum at corporis est sapiente doloremque inventore reiciendis itaque
+          pariatur placeat.
+        </p>
+        <a href="#menu" class="btn">Get Yours Now</a>
+      </div>
+    </section>
+    <!-- Home section Ends -->
+
+    <!-- About section starts -->
+    <section class="about" id="about">
+      <h1 class="heading"><span>about</span> us</h1>
+
+      <div class="row">
+        <div class="image">
+          <img src="coffee_imgs/about-img.jpeg" alt="" />
+        </div>
+
+        <div class="content">
+          <h3>What Make Our Coffee Special</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta
+            illum odio itaque sit, iure architecto voluptatem possimus nisi
+            voluptate! Saepe iure, ipsa perferendis aliquid vitae blanditiis
+            eius qui autem doloremque cumque aliquam cupiditate adipisci ratione
+            repellendus voluptatem illum delectus. Praesentium, facere
+            voluptatibus. Tenetur ab odit, beatae illo doloribus dolorum
+            exercitationem.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus hic
+            accusantium praesentium! Aperiam assumenda a atque hic nisi illo,
+            sequi, accusantium vitae commodi facilis maxime accusamus culpa ex
+            nam ipsam. Voluptates ad sunt nobis sint corrupti assumenda
+            blanditiis, placeat maxime dolorum nostrum. Nam quibusdam molestias
+            perferendis consequuntur. Dolorum, vero minus!
+          </p>
+          <a href="#blogs" class="btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+    <!-- About section Ends -->
+
+    <!-- Menu section starts -->
+    <section class="menu" id="menu">
+      <h1 class="heading">our <span>Drinks</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="coffee_imgs/menu-2.png" class="product-img" alt="" />
+          <h3 lang="ar" class="product-title" dir="rtl">قهوة رايقة 💕</h3>
+          <div class="price-and-discount">
+            <div class="price">$2.99</div>
+            <span>$5.99</span>
+          </div>
+          <button class="btn add-to-cart">Add To Cart</button>
+        </div>
+
+        <div class="box">
+          <img src="coffee_imgs/menu-1.png" class="product-img" alt="" />
+          <h3 lang="ar" class="product-title">قهوة ف الحنين</h3>
+          <div class="price-and-discount">
+            <div class="price">$2.99</div>
+            <span>$5.99</span>
+          </div>
+          <button class="btn add-to-cart">Add To Cart</button>
+        </div>
+
+        <div class="box">
+          <img src="coffee_imgs/menu-3.png" class="product-img" alt="" />
+          <h3 lang="ar" class="product-title">❤ قهوة أحلي بقي</h3>
+          <div class="price-and-discount">
+            <div class="price">$2.99</div>
+            <span>$5.99</span>
+          </div>
+          <button class="btn add-to-cart">Add To Cart</button>
+        </div>
+
+        <div class="box">
+          <img src="coffee_imgs/menu-4.png" class="product-img" alt="" />
+          <h3 lang="ar" class="product-title">💞قهوة حلوة</h3>
+          <div class="price-and-discount">
+            <div class="price">$2.99</div>
+            <span>$5.99</span>
+          </div>
+          <button class="btn add-to-cart">Add To Cart</button>
+        </div>
+
+        <div class="box">
+          <img src="coffee_imgs/menu-3.png" class="product-img" alt="" />
+          <h3 lang="ar" class="product-title">👉👈🥺 قهوة حلوة خالث مالث</h3>
+          <div class="price-and-discount">
+            <div class="price">$2.99</div>
+            <span>$5.99</span>
+          </div>
+          <button class="btn add-to-cart">Add To Cart</button>
+        </div>
+
+        <div class="box">
+          <img src="coffee_imgs/menu-5.png" class="product-img" alt="" />
+          <h3 lang="ar" class="product-title">🥺 قهوة حلوة خالث</h3>
+          <div class="price-and-discount">
+            <div class="price">$2.99</div>
+            <span>$5.99</span>
+          </div>
+          <button class="btn add-to-cart">Add To Cart</button>
+        </div>
+      </div>
+    </section>
+    <!-- Menu section Ends -->
+
+    <!-- Raw Coffee section starts -->
+    <section class="raw-coffee" id="raw-coffee">
+      <h1 class="heading">our <span>Raw Coffee</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="coffee_imgs/cart-item-1.png" class="product-img" alt="" />
+          <h3 lang="ar" class="product-title" dir="rtl">كيلو بن رايق</h3>
+          <div class="price-and-discount">
+            <div class="price">$2.99</div>
+            <span>$5.99</span>
+          </div>
+          <button class="btn add-to-cart">Add To Cart</button>
+        </div>
+
+        <div class="box">
+          <img src="coffee_imgs/cart-item-2.png" class="product-img" alt="" />
+          <h3 lang="ar" class="product-title">كيلو بن جامد</h3>
+          <div class="price-and-discount">
+            <div class="price">$2.99</div>
+            <span>$5.99</span>
+          </div>
+          <button class="btn add-to-cart">Add To Cart</button>
+        </div>
+
+        <div class="box">
+          <img src="coffee_imgs/cart-item-3.png" class="product-img" alt="" />
+          <h3 lang="ar" class="product-title">كيلو بن عظمة</h3>
+          <div class="price-and-discount">
+            <div class="price">$2.99</div>
+            <span>$5.99</span>
+          </div>
+          <button class="btn add-to-cart">Add To Cart</button>
+        </div>
+
+        <div class="box">
+          <img src="coffee_imgs/product-1.png" class="product-img" alt="" />
+          <h3 lang="ar" class="product-title">كيلو بن غالي مش عارف علي ايه</h3>
+          <div class="price-and-discount">
+            <div class="price">$2.99</div>
+            <span>$5.99</span>
+          </div>
+          <button class="btn add-to-cart">Add To Cart</button>
+        </div>
+
+        <div class="box">
+          <img src="coffee_imgs/product-2.png" class="product-img" alt="" />
+          <h3 lang="ar" class="product-title">كيلو بن غالي بس نوع تاني</h3>
+          <div class="price-and-discount">
+            <div class="price">$2.99</div>
+            <span>$5.99</span>
+          </div>
+          <button class="btn add-to-cart">Add To Cart</button>
+        </div>
+
+        <div class="box">
+          <img src="coffee_imgs/product-3.png" class="product-img" alt="" />
+          <h3 lang="ar" class="product-title">كيلو بن غالي بس نوع تالت بقي</h3>
+          <div class="price-and-discount">
+            <div class="price">$2.99</div>
+            <span>$5.99</span>
+          </div>
+          <button class="btn add-to-cart">Add To Cart</button>
+        </div>
+      </div>
+    </section>
+    <!-- Raw Coffee section Ends -->
+
+    <!-- Review section starts -->
+    <section class="review" id="review">
+      <h1 class="heading">customer's <span>review</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="coffee_imgs/quote-img.png" alt="" />
+          <p>Top Grade Coffee 🥺💞</p>
+          <img class="review-person-img" src="coffee_imgs/pic-1.png" alt="" />
+          <h3>person #1</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img src="coffee_imgs/quote-img.png" alt="" />
+          <p>Awesome Coffee, Thanks💕</p>
+          <img class="review-person-img" src="coffee_imgs/pic-2.png" alt="" />
+          <h3>person #2</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img src="coffee_imgs/quote-img.png" alt="" />
+          <p>How Can it be this good, man? 🤞</p>
+          <img class="review-person-img" src="coffee_imgs/pic-3.png" alt="" />
+          <h3>person #3</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Review section ends -->
+
+    <!-- Contact section starts -->
+    <section class="contact" id="contact">
+      <h1 class="heading">contact<span> us</span></h1>
+
+      <div class="row">
+        <iframe
+          class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d301.5506636945445!2d29.962690770206272!3d31.23025010015517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5c4d09bf534b1%3A0xe87c119303b56857!2sAbd%20Allah%20Ebn%20Omar!5e0!3m2!1sen!2seg!4v1656596061103!5m2!1sen!2seg"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+        <form action="">
+          <h3>Get In Touch</h3>
+          <div class="inputBox">
+            <label for="name" class="fas fa-user"></label>
+            <input id="name" type="text" placeholder="name" />
+          </div>
+          <div class="inputBox">
+            <label for="email" class="fas fa-envelope"></label>
+            <input id="email" type="email" placeholder="email" />
+          </div>
+          <div class="inputBox">
+            <label for="tel" class="fas fa-phone"></label>
+            <input id="tel" type="tel" placeholder="number" />
+          </div>
+
+          <input type="submit" value="Contact Now" class="btn" />
+        </form>
+      </div>
+    </section>
+    <!-- Contact section ends -->
+
+    <!-- Blogs section starts -->
+    <section class="blogs" id="blogs">
+      <h1 class="heading">our <span>blogs</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <div class="image">
+            <img src="coffee_imgs/blog-1.jpeg" alt="" />
+          </div>
+          <div class="content">
+            <a href="#" class="title">tasty and refreshing coffee</a>
+            <span>by admin / 21st may, 2021</span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+              unde!
+            </p>
+            <a href="#" class="btn"> read more</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="coffee_imgs/blog-2.jpeg" alt="" />
+          </div>
+          <div class="content">
+            <a href="#" class="title">tasty and refreshing coffee</a>
+            <span>by admin / 21st may, 2021</span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+              unde!
+            </p>
+            <a href="#" class="btn"> read more</a>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="coffee_imgs/blog-3.jpeg" alt="" />
+          </div>
+          <div class="content">
+            <a href="#" class="title">tasty and refreshing coffee</a>
+            <span>by admin / 21st may, 2021</span>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+              unde!
+            </p>
+            <a href="#" class="btn"> read more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Blogs section ends -->
+
+    <!-- footer section starts -->
+    <section class="footer">
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+        <a href="#" class="fab fa-youtube"></a>
+      </div>
+
+      <div class="links">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#menu">drinks</a>
+        <a href="#raw-coffee">raw coffee</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+        <a href="#blogs">blogs</a>
+      </div>
+
+      <div class="credit">
+        Created By <span>Vortex The Novice</span> | All Rights Received
+      </div>
+    </section>
+    <!-- footer section ends -->
+
+    <!-- custom js file link  -->
+    <script src="script.js"></script>
+  </body>
+</html>
